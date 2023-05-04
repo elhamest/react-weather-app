@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 
 export default function App() {
   return (
@@ -32,12 +33,8 @@ export default function App() {
             </div>
           </div>
           <div className="temperature-col3">
-            <div className="time">
-              <ul className="time-info">
-                <li>14:30</li>
-                <li>Last updated: 13:40</li>
-              </ul>
-            </div>
+            <li>14:30</li>
+            <li>Last updated: 13:40</li>
           </div>
         </div>
       </div>

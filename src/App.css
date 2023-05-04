@@ -1,38 +1,69 @@
-.App {
+.App h1 {
+  font-size: 20px;
   text-align: center;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h2,
+h3 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .container {
+  margin: 60px auto;
+  border: 1px solid blue;
+  border-radius: 5px;
+  max-width: 700px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .container-flex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 20px;
+}
+.App .temperature {
+  display: flex;
+  align-items: center;
+}
+.App .temperature-number {
+  font-size: 48px;
 }
 
-.App-link {
-  color: #61dafb;
+.App .temperature-unit {
+  position: relative;
+  top: -18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App ul {
+  margin: 0;
+  padding: 0;
 }
+.App li {
+  list-style: none;
+}
+
+.App .description {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.App .temperature-col3 {
+  align-self: flex-start;
+}
+/*
+.App .clear-fix::after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+/*
+.App .clear-fix {
+  align-items: center;
+  align-self: vertical;
+  align-content: center;
+}
+*/

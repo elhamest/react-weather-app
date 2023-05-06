@@ -1,40 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import Axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
-export default function Weather() {
-  return (
-    <div className="Weather">
-      <div className="container">
-        <div className="container-col1">
-          <h3>Today</h3>
-          <div className="current-date"> Thursday, Jan 4, 2022 </div>
-          <div className="current-time">14:30</div>
-          <h2 className="city">New York City</h2>
-        </div>
-        <div className="container-col2">
-          <div className="temperature">
-            <div>
-              <span className="temperature-number">30</span>
-              <span className="temperature-unit">°C</span>
-            </div>
-            <img
-              src="https://openweathermap.org/img/wn/10d@2x.png"
-              alt="icon"
-            />
-          </div>
-        </div>
-        <div className="container-col3">
-          <div className="last-update">Last updated: 13:40</div>
-          <div className="description">
-            <h3 className="description-title">Light Rain</h3>
-            <ul>
-              <li>Feels like: 2 °C</li>
-              <li>Humidity: 13%</li>
-              <li>Wind: 10 km/h</li>
-            </ul>
-          </div>
+export default function Weather(props) {
+  let [weatherData, setWeatherData] = useState({});
+  /*let [city, setCity] = useState(props.city);*/
+  let [loaded, setLoaded] = useState(false);
+
+  function displayWeather(response) {
+    console.log(response.data);
+    setWeatherData({
+      cityName: response.data.name,
+      temperature: response.data.main.temp,
+      icon: response.data.weather[0].icon,
+      description: response.data.weather[0].description,
+      feelsLike: response.data.main.feels_like,
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+      timeZone: response.data.timezone,
+    });
+  }
+
+  let city = props.city;
+
+  if (loaded) {
+    return (
+      <div className="Weather">
+        <div className="container">
+          <WeatherInfo data={weatherData} />
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    const apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
+    const units = "metric";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    Axios.get(apiUrl).then(displayWeather);
+    setLoaded(true);
+  }
 }

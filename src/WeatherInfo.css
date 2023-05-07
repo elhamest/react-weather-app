@@ -1,9 +1,4 @@
-:root {
-  --gold-color: #e6b325;
-  --gray-light-color: #dbd8e8;
-  --gray-dark-color: #b3b1bf;
-  --little-font-size: 13px;
-}
+@import "./variables.module.css";
 
 .WeatherInfo {
   display: flex;
@@ -51,17 +46,17 @@
 
 .WeatherInfo .description {
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .WeatherInfo .description-title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .WeatherInfo .city {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .WeatherInfo .current-date-time {

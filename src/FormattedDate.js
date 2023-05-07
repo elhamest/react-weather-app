@@ -48,7 +48,7 @@ export default function FormattedDate(props) {
   return (
     <div className="FormattedDate">
       <div>{getFormattedDate()}</div>
-      <div>{getFormattedTime}</div>
+      <div>{getFormattedTime()}</div>
     </div>
   );
 }

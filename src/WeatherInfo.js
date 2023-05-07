@@ -10,7 +10,6 @@ export default function WeatherInfo(props) {
         <div className="current-date-time">
           <FormattedDate date={props.data.date} />
         </div>
-        <div className="last-update">Last updated: 13:40</div>
       </div>
       <div className="col2">
         <div className="temperature">

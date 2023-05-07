@@ -64,9 +64,7 @@
   margin-bottom: 10px;
 }
 
-.WeatherInfo .last-update,
-.WeatherInfo .current-date,
-.WeatherInfo .current-time {
+.WeatherInfo .current-date-time {
   font-size: var(--little-font-size);
   color: var(--gray-dark-color);
 }

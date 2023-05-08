@@ -8,24 +8,6 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
-  function callWeatherApi() {
-    const apiKey = "93d43dfe3b4a950e5b187e5dc313705e";
-    const units = "metric";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-    console.log(apiUrl);
-    Axios.get(apiUrl)
-      .then(handleResponse)
-      .catch((error) => {
-        console.log(error);
-        alert("Sorry, an error occurred while fetching weather data.");
-      });
-  }
-
-  useEffect(() => {
-    //alert("im in use effect");
-    callWeatherApi();
-  }, []);
-
   function handleResponse(response) {
     //alert("handle response start");
     setWeatherData({
@@ -40,11 +22,32 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
     });
+    console.log(response.data);
     //alert(`handle response end! ${weatherData.ready} and ${weatherData.temperature}`);
   }
 
+  function callWeatherApi() {
+    const apiKey = "93d43dfe3b4a950e5b187e5dc313705e";
+    const units = "metric";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+    //console.log(apiUrl);
+
+    Axios.get(apiUrl)
+      .then(handleResponse)
+      .catch((error) => {
+        console.log(error);
+        alert("Sorry, an error occurred while fetching weather data.");
+      });
+  }
+
+  useEffect(() => {
+    //alert("im in use effect");
+    callWeatherApi();
+  }, []);
+
   function handleCityChange(event) {
-    setCity(event.target.value);
+    setCity(event.target.value); //bejash bayad dar handleSubmit bashad
     //alert("city is set");
   }
 

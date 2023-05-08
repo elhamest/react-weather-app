@@ -8,3 +8,62 @@
 .Weather .container {
   margin: 20px;
 }
+
+/*::::: search form :::::*/
+.search-container {
+  display: inline-flex;
+  position: relative;
+}
+
+.search-input {
+  width: 250px;
+  height: 35px;
+  font-size: 14px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  opacity: 70%;
+  position: relative;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin: 5px 0 0 -30px;
+  padding: 0;
+  opacity: 100%;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+/*---- Target all input type search elements */
+input[type="search"] {
+  /* Add padding to make room for the cross symbol */
+  padding-right: 35px;
+}
+
+/*----- Target the cross symbol in WebKit-based browsers (Safari & chrome) */
+input[type="search"]::-webkit-search-cancel-button {
+  position: absolute;
+  right: 35px;
+}
+
+/*----- Target the cross symbol in Internet Explorer and Microsoft Edge */ /*test it*/
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/*----- Target the cross symbol in Firefox */
+/*test it*/
+input[type="search"]::-moz-search-cancel {
+  position: relative;
+  left: -15px;
+}

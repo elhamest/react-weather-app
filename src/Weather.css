@@ -1,3 +1,5 @@
+@import "./variables.module.css";
+
 .Weather {
   margin: 60px auto;
   border: 1px solid rgba(179, 177, 191, 0.5);
@@ -17,17 +19,19 @@
 
 .search-input {
   width: 250px;
-  height: 35px;
+  height: 32px;
   font-size: 14px;
   padding: 8px;
   border: none;
   border-radius: 5px;
   outline: none;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  opacity: 70%;
+  opacity: 50%;
   position: relative;
 }
-
+.search-input::placeholder {
+  color: var(--gray-dark-color);
+}
 .search-button {
   background-color: transparent;
   border: none;

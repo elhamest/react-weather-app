@@ -20,20 +20,13 @@
 
 .WeatherInfo h3 {
   margin: 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.WeatherInfo .temperature {
+.WeatherInfo .temperature-container {
   display: flex;
   align-items: center;
-}
-.WeatherInfo .temperature-number {
-  font-size: 40px;
-}
-
-.WeatherInfo .temperature-unit {
-  position: relative;
-  top: -18px;
-  color: var(--gold-color);
 }
 
 .WeatherInfo ul {
@@ -46,6 +39,7 @@
 }
 
 .WeatherInfo .description {
+  margin-top: 30px;
   display: inline-block;
   padding: 10px;
   border-radius: 10px;
@@ -53,7 +47,7 @@
 }
 
 .WeatherInfo .description-title {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .WeatherInfo .city {

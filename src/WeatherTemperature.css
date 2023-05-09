@@ -1,0 +1,22 @@
+@import "./variables.module.css";
+
+.WeatherTemperature .number {
+  font-size: 40px;
+}
+
+.WeatherTemperature .unit {
+  position: relative;
+  top: -18px;
+}
+
+.WeatherTemperature .unit-c,
+.WeatherTemperature .unit-f,
+.WeatherTemperature a:hover,
+.WeatherTemperature a:active {
+  color: var(--gold-color);
+}
+.WeatherTemperature a,
+.WeatherTemperature .unit-pipe {
+  text-decoration: none;
+  color: var(--gray-dark-color);
+}

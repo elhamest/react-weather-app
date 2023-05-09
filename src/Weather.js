@@ -84,6 +84,6 @@ export default function Weather(props) {
   } else {
     //alert("call weather api with default city...");
     //callWeatherApi();
-    return "Loading...";
+    return <div>Loading...</div>;
   }
 }

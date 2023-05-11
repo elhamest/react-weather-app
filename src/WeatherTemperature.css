@@ -18,5 +18,5 @@
 .WeatherTemperature a,
 .WeatherTemperature .unit-pipe {
   text-decoration: none;
-  color: var(--gray-dark-color);
+  color: var(--dark-gray-color);
 }

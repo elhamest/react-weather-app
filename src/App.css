@@ -4,7 +4,7 @@
   font-size: 20px;
   text-align: center;
   margin: 0;
-  color: var(--gray-dark-color);
+  color: var(--dark-gray-color);
   opacity: 20%;
 }
 
@@ -27,5 +27,5 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--gray-light-color);
+  color: var(--light-gray-color);
 }

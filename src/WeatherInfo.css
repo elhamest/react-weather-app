@@ -32,22 +32,25 @@
 .WeatherInfo ul {
   margin: 0;
   padding: 0;
-  color: var(--gray-light-color);
+  color: var(--light-gray-color);
 }
 .WeatherInfo li {
   list-style: none;
 }
 
 .WeatherInfo .description {
+  /*circular gradient border*/
   border: 2px;
   position: relative;
-  padding: 40px;
+  padding: 30px;
+  /**/
   display: inline-block;
   border-radius: 50%;
   box-shadow: 1px 1px 4px rgba(0, 118, 165, 0.6);
 }
 
 .WeatherInfo .description::after {
+  /*circular gradient border*/
   content: "";
   border-radius: 999px;
   display: block;
@@ -56,9 +59,12 @@
   left: 0;
   height: 100%;
   width: 100%;
+  /*conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+  By default, angle is 0deg and position is center.
+  If no degree is specified, the colors will be spread equally around the center point.*/
   background: conic-gradient(
-    from 30deg,
-    #a19a85,
+    from 10deg,
+    var(--khaki-color),
     #0076a5,
     46%,
     transparent 46%
@@ -85,5 +91,5 @@
 
 .WeatherInfo .current-date-time {
   font-size: var(--little-font-size);
-  color: var(--gray-dark-color);
+  color: var(--dark-gray-color);
 }

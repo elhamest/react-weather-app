@@ -12,12 +12,12 @@
 }
 
 /*::::: search form :::::*/
-.search-container {
+.Weather .search-container {
   display: inline-flex;
   position: relative;
 }
 
-.search-input {
+.Weather .search-input {
   width: 250px;
   height: 32px;
   font-size: 14px;
@@ -29,10 +29,10 @@
   opacity: 50%;
   position: relative;
 }
-.search-input::placeholder {
-  color: var(--gray-dark-color);
+.Weather .search-input::placeholder {
+  color: var(--khaki-color);
 }
-.search-button {
+.Weather .search-button {
   background-color: transparent;
   border: none;
   border-radius: 50%;
@@ -47,19 +47,19 @@
 }
 
 /*---- Target all input type search elements */
-input[type="search"] {
+.Weather input[type="search"] {
   /* Add padding to make room for the cross symbol */
   padding-right: 35px;
 }
 
 /*----- Target the cross symbol in WebKit-based browsers (Safari & chrome) */
-input[type="search"]::-webkit-search-cancel-button {
+.Weather input[type="search"]::-webkit-search-cancel-button {
   position: absolute;
   right: 35px;
 }
 
 /*----- Target the cross symbol in Internet Explorer and Microsoft Edge */ /*test it*/
-input[type="search"]::-ms-clear {
+.Weather input[type="search"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
@@ -67,7 +67,7 @@ input[type="search"]::-ms-clear {
 
 /*----- Target the cross symbol in Firefox */
 /*test it*/
-input[type="search"]::-moz-search-cancel {
+.Weather input[type="search"]::-moz-search-cancel {
   position: relative;
   left: -15px;
 }

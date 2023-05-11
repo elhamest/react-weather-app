@@ -1,6 +1,7 @@
 :root {
   --gold-color: #e6b325;
-  --gray-light-color: #dbd8e8;
-  --gray-dark-color: #b3b1bf;
+  --light-gray-color: #dbd8e8;
+  --dark-gray-color: #b3b1bf;
+  --khaki-color: #a19a85;
   --little-font-size: 13px;
 }

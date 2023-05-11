@@ -39,11 +39,40 @@
 }
 
 .WeatherInfo .description {
-  margin-top: 30px;
+  border: 2px;
+  position: relative;
+  padding: 40px;
   display: inline-block;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px rgba(0, 118, 165, 0.6);
+}
+
+.WeatherInfo .description::after {
+  content: "";
+  border-radius: 999px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: conic-gradient(
+    from 30deg,
+    #a19a85,
+    #0076a5,
+    46%,
+    transparent 46%
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 2px),
+    #fff calc(100% - 2px + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 2px),
+    #fff calc(100% - 2px + 1px)
+  );
 }
 
 .WeatherInfo .description-title {

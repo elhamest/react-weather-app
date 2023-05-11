@@ -3,16 +3,14 @@ import Axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import SearchIcon from "./SearchIcon";
 import "./Weather.css";
-//var fetchState = "none";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    //fetchState = "ready";
-    console.log("response success: "); //delete it
-    console.log(response.data); //delete it
+    //console.log("response success: ");
+    //console.log(response.data);
 
     setWeatherData({
       ready: true,
@@ -29,8 +27,7 @@ export default function Weather(props) {
   }
 
   function callWeatherApi() {
-    console.log("call weather api...");
-    //fetchState = "running";
+    //console.log("call weather api...");
     const apiKey = "93d43dfe3b4a950e5b187e5dc313705e";
     const units = "metric";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -39,7 +36,6 @@ export default function Weather(props) {
       .catch((error) => {
         console.error("Sorry, an error occurred while fetching weather data.");
         console.error(error);
-        //fetchState = "none";
       });
   }
 
@@ -52,10 +48,8 @@ export default function Weather(props) {
     callWeatherApi();
   }
 
-  //if (fetchState === "ready") {
   if (weatherData.ready) {
-    //console.log("ready now!!!" + fetchState);
-    console.log("page rendering...");
+    //console.log("page rendering...");
     return (
       <div className="Weather">
         <div className="container">
@@ -75,8 +69,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    //if (fetchState === "none") {
-    console.log("else statement...");
+    //console.log("else statement...");
     callWeatherApi();
     return <div>Loading...</div>;
   }

@@ -1,24 +1,30 @@
 @import "./variables.module.css";
 
 .Weather {
-  margin: 60px auto;
+  margin: 20px auto;
   border: 1px solid rgba(179, 177, 191, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 5px;
   max-width: 650px;
 }
 
 .Weather .container {
-  margin: 20px;
+  margin: 15px 35px 25px;
 }
 
 /*::::: search form :::::*/
-.Weather .search-container {
+.Weather .container-form {
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+.Weather form {
   display: inline-flex;
   position: relative;
 }
 
 .Weather .search-input {
-  width: 250px;
+  width: 300px;
   height: 32px;
   font-size: 14px;
   padding: 8px;
@@ -26,7 +32,7 @@
   border-radius: 5px;
   outline: none;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-  opacity: 50%;
+  opacity: 60%;
   position: relative;
 }
 .Weather .search-input::placeholder {
@@ -70,4 +76,17 @@
 .Weather input[type="search"]::-moz-search-cancel {
   position: relative;
   left: -15px;
+}
+
+hr {
+  height: 8px;
+  background-image: linear-gradient(
+    30deg,
+    transparent,
+    var(--khaki-color),
+    transparent
+  );
+  border: 0;
+  height: 1px;
+  margin-bottom: 30px;
 }

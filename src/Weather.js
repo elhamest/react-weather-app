@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import SearchIcon from "./SearchIcon";
 import "./Weather.css";
 
@@ -53,18 +54,23 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <div className="container">
+          <div className="container-form">
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                placeholder="Search..."
+                className="search-input"
+                onInput={handleCityChange}
+              />
+              <button type="submit" className="search-button">
+                <SearchIcon />
+              </button>
+            </form>
+          </div>
+          <hr />
+
           <WeatherInfo data={weatherData} />
-          <form className="search-container" onSubmit={handleSubmit}>
-            <input
-              type="search"
-              placeholder="Search..."
-              className="search-input"
-              onInput={handleCityChange}
-            />
-            <button type="submit" className="search-button">
-              <SearchIcon />
-            </button>
-          </form>
+          <WeatherForecast />
         </div>
       </div>
     );

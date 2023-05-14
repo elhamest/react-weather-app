@@ -1,13 +1,12 @@
 @import "./variables.module.css";
 
 .App h1 {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
-  margin: 0;
-  color: var(--dark-gray-color);
+  margin: 10px 0 10px 0;
+  color: var(--light-gray-color);
   opacity: 20%;
 }
-
 /*======== footer ========*/
 
 footer {

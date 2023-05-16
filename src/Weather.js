@@ -10,8 +10,8 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    //console.log("response success: ");
-    //console.log(response.data);
+    /*console.log("Current response success: ");
+    console.log(response.data);*/
 
     setWeatherData({
       ready: true,
@@ -70,7 +70,7 @@ export default function Weather(props) {
           <hr />
 
           <WeatherInfo data={weatherData} />
-          <WeatherForecast />
+          <WeatherForecast coordinate={weatherData.coordinate} />
         </div>
       </div>
     );

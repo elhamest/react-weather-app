@@ -6,7 +6,7 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 5px;
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .Weather .container {
@@ -36,7 +36,7 @@
   position: relative;
 }
 .Weather .search-input::placeholder {
-  color: var(--khaki-color);
+  color: var(--dark-gray-color);
 }
 .Weather .search-button {
   background-color: transparent;
@@ -83,7 +83,7 @@ hr {
   background-image: linear-gradient(
     30deg,
     transparent,
-    var(--khaki-color),
+    var(--border-color),
     transparent
   );
   border: 0;

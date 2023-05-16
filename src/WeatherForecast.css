@@ -4,22 +4,33 @@
   margin-top: 50px;
 }
 
-.WeatherForecast .card-container {
+.WeatherForecast .WeatherForecast-container {
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
 }
 
-.WeatherForecast .WeatherDailyForecast-card {
+.WeatherForecast .WeatherForecast-card {
   padding: 10px 15px;
   display: inline-block;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(230, 244, 241, 0.3) 0px 1px 2px 0px,
+    rgba(230, 244, 241, 0.15) 0px 2px 6px 2px;
   text-align: center;
 }
 
-.WeatherForecast .WeatherDailyForecast-card-day {
+.WeatherForecast .WeatherDailyForecast-day {
   margin-bottom: 10px;
+  color: var(--dark-gray-color);
+}
+
+.WeatherForecast .WeatherDailyForecast-description {
+  margin: 8px 0;
+  color: var(--dark-gray-color);
+}
+
+.WeatherForecast .WeatherDailyForecast-temperature {
+  font-size: 14px;
+  color: var(--dark-gray-color);
 }

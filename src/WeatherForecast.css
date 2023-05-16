@@ -1,7 +1,7 @@
 @import "./variables.module.css";
 
 .WeatherForecast {
-  margin-top: 50px;
+  margin: 50px 0 30px;
 }
 
 .WeatherForecast .WeatherForecast-container {
@@ -22,15 +22,19 @@
 
 .WeatherForecast .WeatherDailyForecast-day {
   margin-bottom: 10px;
-  color: var(--dark-gray-color);
+  color: #b1e2f4;
 }
 
 .WeatherForecast .WeatherDailyForecast-description {
   margin: 8px 0;
-  color: var(--dark-gray-color);
+  color: #b1e2f4;
 }
 
 .WeatherForecast .WeatherDailyForecast-temperature {
   font-size: 14px;
-  color: var(--dark-gray-color);
+  color: #cee9e4;
+}
+
+.WeatherForecast .WeatherDailyForecast-temperature-min {
+  opacity: 80%;
 }
